@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Highlight"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Product \nHighlight"
+        android:textSize="40sp"
+        android:fontFamily="@font/frank"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        tools:ignore="MissingConstraints"
+        android:layout_margin="9dp"
+        android:layout_below="@+id/header"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/Container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/viewPager">
+
+        <LinearLayout
+            android:id="@+id/Container2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/Container">
+
+            <TextView
+                android:id="@+id/women"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Women Collection"
+                android:textSize="30sp"
+                android:fontFamily="@font/frank"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/WBtn"
+                android:layout_width="115dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/more"
+                android:layout_marginRight="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Container3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/Container2">
+
+            <ImageView
+                android:id="@+id/w1"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:src="@drawable/c1"
+                android:layout_below="@+id/women"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"/>
+            <ImageView
+                android:id="@+id/w2"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:src="@drawable/c2"
+                android:layout_below="@+id/women"
+                android:layout_toEndOf="@+id/w1"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"/>
+            <ImageView
+                android:id="@+id/w3"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:src="@drawable/c3"
+                android:layout_below="@+id/women"
+                android:layout_toEndOf="@+id/w2"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Container4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/Container3">
+
+            <LinearLayout
+                android:id="@+id/Container5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/Container4">
+
+                <TextView
+                    android:id="@+id/men"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Men Collection"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/frank"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="10dp"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+
+                <ImageButton
+                    android:id="@+id/MBtn"
+                    android:layout_width="115dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/more"
+                    android:layout_marginRight="8dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Container6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/Container5">
+
+                <ImageView
+                    android:id="@+id/m1"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:src="@drawable/d1"
+                    android:layout_below="@+id/men"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"/>
+                <ImageView
+                    android:id="@+id/m2"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:src="@drawable/b2"
+                    android:layout_below="@+id/men"
+                    android:layout_toEndOf="@+id/m1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"/>
+                <ImageView
+                    android:id="@+id/m3"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:src="@drawable/d3"
+                    android:layout_below="@+id/men"
+                    android:layout_toEndOf="@+id/m2"
+                    android:layout_marginLeft="10dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+
