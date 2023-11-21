@@ -119,7 +119,38 @@
             android:layout_height="10dp"/>
 
         <LinearLayout
-            android:id="@+id/blazer_container"
+            android:id="@+id/tuxContainer3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/t7"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:src="@drawable/b1"
+                android:layout_marginLeft="10dp"/>
+            <ImageView
+                android:id="@+id/t8"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:src="@drawable/d2"
+                android:layout_marginLeft="7dp"/>
+            <ImageView
+                android:id="@+id/t9"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:src="@drawable/d1"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/category_container2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -140,25 +171,56 @@
             android:layout_height="10dp"/>
 
         <LinearLayout
+            android:id="@+id/blazer_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/b1"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:src="@drawable/b4"
+                android:layout_marginLeft="10dp"/>
+            <ImageView
+                android:id="@+id/b2"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:src="@drawable/d4"
+                android:layout_marginLeft="7dp"/>
+            <ImageView
+                android:id="@+id/b3"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:src="@drawable/d5"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <LinearLayout
             android:id="@+id/blazer_container2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/t7"
+                android:id="@+id/b4"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:src="@drawable/d3"
+                android:layout_marginLeft="10dp"/>
+            <ImageView
+                android:id="@+id/b5"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
                 android:src="@drawable/b4"
-                android:layout_marginLeft="10dp"/>
-            <ImageView
-                android:id="@+id/t8"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
-                android:src="@drawable/d4"
                 android:layout_marginLeft="7dp"/>
             <ImageView
-                android:id="@+id/t9"
+                android:id="@+id/b6"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
                 android:src="@drawable/d5"
@@ -177,19 +239,19 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/t10"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
-                android:src="@drawable/d3"
-                android:layout_marginLeft="10dp"/>
-            <ImageView
-                android:id="@+id/t11"
+                android:id="@+id/b7"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
                 android:src="@drawable/b4"
+                android:layout_marginLeft="10dp"/>
+            <ImageView
+                android:id="@+id/b8"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:src="@drawable/d4"
                 android:layout_marginLeft="7dp"/>
             <ImageView
-                android:id="@+id/t12"
+                android:id="@+id/b9"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
                 android:src="@drawable/d5"

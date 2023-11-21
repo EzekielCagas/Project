@@ -21,7 +21,7 @@ public class HomeScreen extends AppCompatActivity {
     private Button browse;
     DrawerLayout drawerLayout;
     ImageView menu;
-    LinearLayout home, men, women, kids, about;
+    LinearLayout home, men, women, kids;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,6 @@ public class HomeScreen extends AppCompatActivity {
         men = findViewById(R.id.men);
         women = findViewById(R.id.women);
         kids = findViewById(R.id.kids);
-        about = findViewById(R.id.about);
 
 
 

@@ -1,5 +1,6 @@
 plugins {
     id("com.android.application")
+
 }
 
 android {
@@ -33,6 +34,7 @@ android {
 
 dependencies {
 
+    //Android Studio
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
@@ -40,6 +42,14 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
+
+    //Animation
     implementation("androidx.viewpager2:viewpager2:1.0.0")
     implementation ("com.makeramen:roundedimageview:2.3.0")
+
+    //recycler view
+    implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
+    //cardview library
+    implementation("androidx.cardview:cardview:1.0.0")
+
 }
