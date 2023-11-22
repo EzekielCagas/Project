@@ -10,8 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class About extends AppCompatActivity {
-    TextView oneD;
-    LinearLayout one;
+    TextView oneD, whyD;
+    LinearLayout one, why;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,11 +19,14 @@ public class About extends AppCompatActivity {
         setContentView(R.layout.activity_about);
 
         oneD=findViewById(R.id.oneD);
+        whyD=findViewById(R.id.whyD);
         one = findViewById(R.id.one);
+        why=findViewById(R.id.why);
     }
     public void expand(View view){
-        int v = (oneD.getVisibility() == View.GONE)? View.VISIBLE: View.GONE;
+        int o = (oneD.getVisibility() == View.GONE)? View.VISIBLE: View.GONE;
         TransitionManager.beginDelayedTransition(one, new AutoTransition());
-        oneD.setVisibility(v);
+        oneD.setVisibility(o);
     }
+
 }

@@ -7,12 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".WColl">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <include layout="@layout/toolbar"/>
+            <include layout="@layout/toolbar" />
 
             <LinearLayout
                 android:id="@+id/title_container"
@@ -119,6 +124,37 @@
                 android:layout_height="10dp"/>
 
             <LinearLayout
+                android:id="@+id/dressContainer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/n7"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:src="@drawable/c4"
+                    android:layout_marginLeft="10dp"/>
+                <ImageView
+                    android:id="@+id/n8"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:src="@drawable/c3"
+                    android:layout_marginLeft="7dp"/>
+                <ImageView
+                    android:id="@+id/n9"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:src="@drawable/c2"
+                    android:layout_marginLeft="10dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <LinearLayout
                 android:id="@+id/prom_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -140,25 +176,25 @@
                 android:layout_height="10dp"/>
 
             <LinearLayout
-                android:id="@+id/dressContainer3"
+                android:id="@+id/dressContainer4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/n7"
+                    android:id="@+id/p1"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:src="@drawable/c5"
                     android:layout_marginLeft="10dp"/>
                 <ImageView
-                    android:id="@+id/n8"
+                    android:id="@+id/p2"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:src="@drawable/c6"
                     android:layout_marginLeft="7dp"/>
                 <ImageView
-                    android:id="@+id/n9"
+                    android:id="@+id/p3"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:src="@drawable/c7"
@@ -171,25 +207,56 @@
                 android:layout_height="10dp"/>
 
             <LinearLayout
-                android:id="@+id/dressContainer4"
+                android:id="@+id/dressContainer5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/n10"
+                    android:id="@+id/p4"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:src="@drawable/c5"
                     android:layout_marginLeft="10dp"/>
                 <ImageView
-                    android:id="@+id/n11"
+                    android:id="@+id/p5"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:src="@drawable/c6"
                     android:layout_marginLeft="7dp"/>
                 <ImageView
-                    android:id="@+id/n12"
+                    android:id="@+id/p6"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:src="@drawable/c7"
+                    android:layout_marginLeft="10dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/dressContainer6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/p7"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:src="@drawable/c5"
+                    android:layout_marginLeft="10dp"/>
+                <ImageView
+                    android:id="@+id/p8"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:src="@drawable/c6"
+                    android:layout_marginLeft="7dp"/>
+                <ImageView
+                    android:id="@+id/p9"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:src="@drawable/c7"
@@ -198,6 +265,7 @@
             </LinearLayout>
 
         </LinearLayout>
+    </ScrollView>
 
     <RelativeLayout
         android:layout_width="300dp"

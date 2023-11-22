@@ -69,6 +69,12 @@ public class HomeScreen extends AppCompatActivity {
                 redirectActivity(HomeScreen.this, WColl.class);
             }
         });
+        kids.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirectActivity(HomeScreen.this, KColl.class);
+            }
+        });
 
     }
 

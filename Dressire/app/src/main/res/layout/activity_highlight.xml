@@ -7,6 +7,7 @@
     tools:context=".Highlight"
     android:orientation="vertical">
 
+
     <TextView
         android:id="@+id/header"
         android:layout_width="wrap_content"
@@ -20,6 +21,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"/>
 
+
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
@@ -27,7 +29,6 @@
         tools:ignore="MissingConstraints"
         android:layout_margin="9dp"
         android:layout_below="@+id/header"/>
-
 
 
     <LinearLayout
@@ -181,9 +182,85 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/Container7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/Container6">
+
+            <LinearLayout
+                android:id="@+id/Container8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/Container6">
+
+                <TextView
+                    android:id="@+id/kids"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kids Collection"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/frank"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="10dp"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+
+                <ImageButton
+                    android:id="@+id/KBtn"
+                    android:layout_width="115dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/more"
+                    android:layout_marginRight="8dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Container9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/Container6">
+
+                <ImageView
+                    android:id="@+id/k1"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:src="@drawable/k1"
+                    android:layout_below="@+id/kids"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"/>
+                <ImageView
+                    android:id="@+id/k2"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:src="@drawable/k2"
+                    android:layout_below="@+id/kids"
+                    android:layout_toEndOf="@+id/k1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"/>
+                <ImageView
+                    android:id="@+id/k3"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:src="@drawable/k3"
+                    android:layout_below="@+id/kids"
+                    android:layout_toEndOf="@+id/k2"
+                    android:layout_marginLeft="10dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
 
     </LinearLayout>
-
 
 
 </RelativeLayout>

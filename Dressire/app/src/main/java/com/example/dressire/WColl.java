@@ -15,7 +15,7 @@ import android.widget.LinearLayout;
 public class WColl extends AppCompatActivity {
     DrawerLayout drawerLayout;
     ImageView menu;
-    LinearLayout home, men, women, kids, about;
+    LinearLayout home, men, women, kids;
 
 
     @Override
@@ -29,7 +29,6 @@ public class WColl extends AppCompatActivity {
         men = findViewById(R.id.men);
         women = findViewById(R.id.women);
         kids = findViewById(R.id.kids);
-        about = findViewById(R.id.about);
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +52,12 @@ public class WColl extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 recreate();
+            }
+        });
+        kids.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirectActivity(WColl.this, KColl.class);
             }
         });
 
