@@ -54,6 +54,12 @@ public class MColl extends AppCompatActivity {
                 redirectActivity(MColl.this, WColl.class);
             }
         });
+        kids.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirectActivity(MColl.this, KColl.class);
+            }
+        });
 
     }
 

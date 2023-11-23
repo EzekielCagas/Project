@@ -55,6 +55,12 @@ public class WColl extends AppCompatActivity {
                 recreate();
             }
         });
+        kids.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirectActivity(WColl.this, KColl.class);
+            }
+        });
 
     }
 
