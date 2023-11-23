@@ -4,101 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary"
+    android:orientation="vertical"
+    android:padding="8dp"
     tools:context=".About">
 
-    <androidx.drawerlayout.widget.DrawerLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/drawer_layout">
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <include
-                layout="@layout/toolbar"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="About Us"
-                android:fontFamily="@font/frank"
-                android:layout_gravity="center"
-                android:textColor="@color/white"
-                android:textSize="36sp"/>
-
-            <androidx.cardview.widget.CardView
-                android:onClick="expand"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="18dp"
-                app:contentPadding="20dp">
-                
-                <LinearLayout
-                    android:id="@+id/one"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="One Step Solution"
-                        android:textSize="32sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/black"/>
-                    <TextView
-                        android:id="@+id/oneD"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Dressire is a one step solution to your browsing
-problem. We provide you a digitalized version when browsing your desired Gowns, Suits,
-and Dresses in rental shops giving you a newer experience."
-                        android:visibility="gone"
-                        android:textSize="18sp"/>
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:onClick="expand"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="18dp"
-                app:contentPadding="20dp">
-
-                <LinearLayout
-                    android:id="@+id/why"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Why Rental?"
-                        android:textSize="30sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/black"/>
-                    <TextView
-                        android:id="@+id/whyD"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Being confidently fashionable has never been more environmentally friendly. Why own a gown you will wear once in a blue moon when you can rent gowns to be the best"
-                        android:textSize="18sp"
-                        android:visibility="gone"/>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
-
-
-    </androidx.drawerlayout.widget.DrawerLayout>
 
 </LinearLayout>

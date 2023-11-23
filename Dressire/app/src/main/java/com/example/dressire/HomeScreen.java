@@ -21,7 +21,7 @@ public class HomeScreen extends AppCompatActivity {
     private Button browse;
     DrawerLayout drawerLayout;
     ImageView menu;
-    LinearLayout home, men, women, kids;
+    LinearLayout home, men, women, kids, about;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +35,7 @@ public class HomeScreen extends AppCompatActivity {
         men = findViewById(R.id.men);
         women = findViewById(R.id.women);
         kids = findViewById(R.id.kids);
+        about = findViewById(R.id.about);
 
 
 
@@ -73,6 +74,12 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 redirectActivity(HomeScreen.this, KColl.class);
+            }
+        });
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirectActivity(HomeScreen.this, About.class);
             }
         });
 

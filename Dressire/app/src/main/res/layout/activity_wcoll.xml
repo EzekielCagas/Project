@@ -7,17 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".WColl">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="false">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="false">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <include layout="@layout/toolbar" />
+            <include layout="@layout/toolbar"/>
 
             <LinearLayout
                 android:id="@+id/title_container"
@@ -133,19 +133,19 @@
                     android:id="@+id/n7"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
-                    android:src="@drawable/c4"
+                    android:src="@drawable/c1"
                     android:layout_marginLeft="10dp"/>
                 <ImageView
                     android:id="@+id/n8"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
-                    android:src="@drawable/c3"
+                    android:src="@drawable/c2"
                     android:layout_marginLeft="7dp"/>
                 <ImageView
                     android:id="@+id/n9"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
-                    android:src="@drawable/c2"
+                    android:src="@drawable/c3"
                     android:layout_marginLeft="10dp"/>
 
             </LinearLayout>
@@ -265,7 +265,8 @@
             </LinearLayout>
 
         </LinearLayout>
-    </ScrollView>
+
+</ScrollView>
 
     <RelativeLayout
         android:layout_width="300dp"

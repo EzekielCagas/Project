@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -51,12 +52,6 @@ public class MColl extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 redirectActivity(MColl.this, WColl.class);
-            }
-        });
-        kids.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                redirectActivity(MColl.this, KColl.class);
             }
         });
 

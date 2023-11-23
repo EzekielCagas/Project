@@ -18,7 +18,12 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <include layout="@layout/toolbar" />
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbars"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:elevation="4dp"
+                android:background="@color/primary"/>
 
             <LinearLayout
                 android:id="@+id/appname"
@@ -81,15 +86,12 @@ you the Dress \nthat you Desire right at your screen."
 
         </LinearLayout>
 
-        <RelativeLayout
-            android:layout_width="300dp"
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="@color/white"
-            android:layout_gravity="start">
-
-            <include
-                layout="@layout/nav_menu"/>
-        </RelativeLayout>
+            android:layout_gravity="start"
+            app:menu="@layout/nav_menu"/>
 
     </androidx.drawerlayout.widget.DrawerLayout>
 
@@ -119,6 +121,8 @@ you the Dress \nthat you Desire right at your screen."
         android:layout_marginEnd="-295dp"
         android:layout_marginBottom="1dp"
         android:background="@drawable/bg_dress" />
+
+
 
 
 </RelativeLayout>

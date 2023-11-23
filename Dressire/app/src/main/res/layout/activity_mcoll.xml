@@ -7,10 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".MColl">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="false">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="false">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -265,15 +265,17 @@
         </LinearLayout>
 
     </LinearLayout>
-    </ScrollView>
+
+</ScrollView>
 
     <RelativeLayout
         android:layout_width="300dp"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:layout_gravity="start">
 
-        <include layout="@layout/nav_menu" />
+        <include
+            layout="@layout/nav_menu"/>
     </RelativeLayout>
 
 
