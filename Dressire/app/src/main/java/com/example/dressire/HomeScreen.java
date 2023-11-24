@@ -79,7 +79,7 @@ public class HomeScreen extends AppCompatActivity {
         about.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectActivity(HomeScreen.this, About.class);
+                redirectActivity(HomeScreen.this, AboutUs.class);
             }
         });
 

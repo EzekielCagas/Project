@@ -60,6 +60,12 @@ public class KColl extends AppCompatActivity {
                 recreate();
             }
         });
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirectActivity(KColl.this, AboutUs.class);
+            }
+        });
 
     }
 

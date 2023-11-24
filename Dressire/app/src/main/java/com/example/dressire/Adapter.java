@@ -1,73 +1,72 @@
 package com.example.dressire;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
-import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.VersionVH> {
+public class Adapter extends RecyclerView.Adapter<MyViewHolder> {
 
-    List<Descriptions>descriptionsList;
+    private Context context;
+    private List<DataClass> dataList;
 
-    public Adapter(List<Descriptions> descriptionsList) {
-        this.descriptionsList = descriptionsList;
+    public Adapter(Context context, List<DataClass> dataList){
+        this.context = context;
+        this.dataList = dataList;
     }
 
     @NonNull
     @Override
-    public VersionVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cards, parent, false);
-        return new VersionVH(view);
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout, parent, false);
+        return new MyViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull VersionVH holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        Descriptions descriptions = descriptionsList.get(position);
-        holder.aboutTxt.setText(descriptions.getAbouts());
-        holder.descriptionTxt.setText(descriptions.getDescription());
+        holder.recTitle.setText(dataList.get(position).getDataTitle());
+        holder.recDesc.setText(dataList.get(position).getDataDesc());
 
+        holder.recCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, DetailActivity.class);
+                intent.putExtra("Title", dataList.get(holder.getAdapterPosition()).getDataTitle());
+                intent.putExtra("Desc", dataList.get(holder.getAdapterPosition()).getDataDesc());
 
-        boolean isExpandable = descriptionsList.get(position).isExapandable();
-        holder.expandableLayout.setVisibility(isExpandable ? View.VISIBLE : View.GONE);
+                context.startActivity(intent);
+            }
+        });
 
     }
 
     @Override
     public int getItemCount() {
-        return descriptionsList.size();
-    }
-
-    public class VersionVH extends RecyclerView.ViewHolder {
-
-        TextView aboutTxt, descriptionTxt;
-        LinearLayout linearLayout;
-        RelativeLayout expandableLayout;
-        public VersionVH(@NonNull View itemView) {
-            super(itemView);
-
-            aboutTxt = itemView.findViewById(R.id.abouts);
-            descriptionTxt = itemView.findViewById(R.id.description);
-
-            linearLayout = itemView.findViewById(R.id.linear_layout);
-            expandableLayout = itemView.findViewById(R.id.expandable_layout);
-
-            linearLayout.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Descriptions abouts = descriptionsList.get(getAdapterPosition());
-                    abouts.setExapandable(!abouts.isExapandable());
-                    notifyItemChanged(getAdapterPosition());
-                }
-            });
-        }
+        return dataList.size();
     }
 }
+
+class  MyViewHolder extends RecyclerView.ViewHolder{
+
+    TextView recTitle, recDesc;
+    CardView recCard;
+
+    public MyViewHolder(@NonNull View itemView) {
+        super(itemView);
+
+        recTitle = itemView.findViewById(R.id.recTitle);
+        recDesc = itemView.findViewById(R.id.recDesc);
+        recCard = itemView.findViewById(R.id.reCard);
+
+    }
+}
+
