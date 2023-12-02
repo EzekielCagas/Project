@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.example.dressire.Model.Womens;
+import com.example.dressire.adapter.WCollAdapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -21,6 +22,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class WColl extends AppCompatActivity {
 
+    RecyclerView recyclerView = findViewById(R.id.recyclerView);
+    WCollAdapter adapter = new WCollAdapter();
 
 
     @Override
@@ -28,14 +31,16 @@ public class WColl extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wcoll);
 
-        FirebaseDatabase db = FirebaseDatabase.getInstance();
+        recyclerView.setAdapter(adapter);
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference productsRef = database.getReference("Women Collection");
 
         productsRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot wcollectionSnapshot : dataSnapshot.getChildren()){
-                    Womens product = wcollectionSnapshot.getValue(Womens.class);
+                    Womens women = wcollectionSnapshot.getValue(Womens.class);
                 }
             }
 
