@@ -1,0 +1,69 @@
+﻿<Page x:Class="MoreBullets.Views.About"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MoreBullets.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="525"
+      Title="About" Background="Beige">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="About Developers" 
+                   FontSize="24" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,10,0,0" 
+                   FontFamily="Century Gothic" 
+                   FontWeight="Bold"
+                   Grid.Row="0"/>
+        <TextBlock Text="Janelle Maynigo"
+                   FontSize="20"
+                   FontFamily="Century Gothic" HorizontalAlignment="Center"
+                   Grid.Row="2"/>
+        <TextBlock Text="Project Leader"
+           FontSize="20"
+           FontFamily="Century Gothic" HorizontalAlignment="Center"
+           Grid.Row="3"/>
+
+        <TextBlock Text="Developers" 
+                   Grid.Row="5" 
+                   FontSize="20" 
+                   HorizontalAlignment="Center"/>
+        <TextBlock Text="Bagawe, Emerson"
+                   Grid.Row="6" 
+                   FontSize="20" 
+                   Margin="45,0,0,0"/>
+        <TextBlock Text="Cagas, Ezekiel"
+           Grid.Row="6" 
+           FontSize="20" 
+           HorizontalAlignment="Right" 
+           Margin="0,0,65,0"/>
+
+        <TextBlock Text="Members" 
+           Grid.Row="8" 
+           FontSize="20" 
+           HorizontalAlignment="Center"/>
+        <TextBlock Text="Evan, Jessica"
+           Grid.Row="9" 
+           FontSize="20" 
+           Margin="55,0,0,0"/>
+        <TextBlock Text="Gapuz, Lei Aries JB"
+           Grid.Row="9" 
+           FontSize="20" 
+           HorizontalAlignment="Right" 
+           Margin="0,0,45,0"/>
+
+    </Grid>
+</Page>
