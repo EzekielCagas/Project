@@ -1,13 +1,14 @@
 {
   "project_info": {
-    "project_number": "387582051107",
-    "project_id": "dressire-2501f",
-    "storage_bucket": "dressire-2501f.appspot.com"
+    "project_number": "1078560773056",
+    "firebase_url": "https://dressire-929ec-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "dressire-929ec",
+    "storage_bucket": "dressire-929ec.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:387582051107:android:5dcc969f071fb0f3a7c296",
+        "mobilesdk_app_id": "1:1078560773056:android:26573703477d2f83876e25",
         "android_client_info": {
           "package_name": "com.example.dressire"
         }
@@ -15,7 +16,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCuY-DsLcEXC9jo9YyBEevo43Sop-2nnks"
+          "current_key": "AIzaSyD4JV3-k7bpV2MHydJBZ_xul6UCvwBErmM"
         }
       ],
       "services": {

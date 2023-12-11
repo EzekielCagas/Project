@@ -14,7 +14,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.dressire.adapter.InventoryAdapter;
-import com.example.dressire.adapter.WomenAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -24,27 +23,34 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class WColl extends AppCompatActivity {
+public class Inventory extends AppCompatActivity {
     DrawerLayout drawerLayout;
-    ImageView menu;
-    LinearLayout home, men, women, kids, logout;
+    ImageView menu, account;
+    LinearLayout home, inventory, reservations, about, logout;
+    FloatingActionButton fab;
     GridView gridView;
     ArrayList<DataClass> dataList;
     InventoryAdapter adapter;
     final private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Products");
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-         super.onCreate(savedInstanceState);
-         setContentView(R.layout.activity_wcoll);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_inventory);
 
-        drawerLayout = findViewById(R.id.drawer_layout);
+        drawerLayout = findViewById(R.id.drawerLayout);
         menu = findViewById(R.id.menu);
+        account = findViewById(R.id.account);
         home = findViewById(R.id.home);
-        men = findViewById(R.id.men);
-        women = findViewById(R.id.women);
-        kids = findViewById(R.id.kids);
+        inventory = findViewById(R.id.inventory);
+        reservations = findViewById(R.id.reservations);
+        about = findViewById(R.id.about);
+        fab = findViewById(R.id.fab);
+        gridView = findViewById(R.id.gridView);
+
+        dataList = new ArrayList<>();
+        adapter = new InventoryAdapter(dataList, this);
+        gridView.setAdapter(adapter);
         logout = findViewById(R.id.logout);
 
         logout.setOnClickListener(new View.OnClickListener() {
@@ -53,12 +59,6 @@ public class WColl extends AppCompatActivity {
                 openMainActivity();
             }
         });
-
-        gridView = findViewById(R.id.gridView);
-
-        dataList = new ArrayList<>();
-        adapter = new InventoryAdapter(dataList, this);
-        gridView.setAdapter(adapter);
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -82,31 +82,45 @@ public class WColl extends AppCompatActivity {
                 openDrawer(drawerLayout);
             }
         });
+        account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirectActivity(Inventory.this, Account.class);
+            }
+        });
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectActivity(WColl.this, HomeScreen.class);
+                redirectActivity(Inventory.this, SellerH.class);
             }
         });
-        men.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                redirectActivity(WColl.this, WColl.class);
-            }
-        });
-        women.setOnClickListener(new View.OnClickListener() {
+        inventory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 recreate();
             }
         });
-        kids.setOnClickListener(new View.OnClickListener() {
+        reservations.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectActivity(WColl.this, KColl.class);
+                redirectActivity(Inventory.this, Reservation.class);
+            }
+        });
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirectActivity(Inventory.this, About.class);
             }
         });
 
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Inventory.this, Upload.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     public void openMainActivity(){
@@ -122,7 +136,7 @@ public class WColl extends AppCompatActivity {
             drawerLayout.closeDrawer(GravityCompat.START);
         }
     }
-    public static void redirectActivity(Activity activity, Class secondActivity){
+    public static void redirectActivity(Activity activity, Class secondActivity) {
         Intent intent = new Intent(activity, secondActivity);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         activity.startActivity(intent);
